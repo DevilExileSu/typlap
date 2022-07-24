@@ -1,0 +1,13 @@
+[package]
+name = "typlap"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossterm = "0.24"
+pinyin = "0.9"
+anyhow = "1"
+rand = "0.8"
+rodio="0.15"
