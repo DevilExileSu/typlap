@@ -365,6 +365,7 @@ impl Tui {
 
 impl Drop for Tui {
     fn drop(&mut self) {
+        terminal::disable_raw_mode().unwrap();
         execute!(self.stdout, Clear(terminal::ClearType::All), MoveTo(0,0)).unwrap();
     }
 }
