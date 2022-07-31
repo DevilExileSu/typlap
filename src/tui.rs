@@ -61,6 +61,7 @@ impl Tui {
     }
 
     pub fn init(&mut self) -> Result<()>{
+        terminal::enable_raw_mode()?;
         execute!(self.stdout, Clear(terminal::ClearType::All), terminal::SetSize(self.cols, self.rows), cursor::Show, cursor::SetCursorShape(cursor::CursorShape::Line))?;
         self.init_bound()?;
         self.init_text()?;
